@@ -19,7 +19,8 @@ WriteMakefile(
     PREREQ_PM => {
         'Test::More' => 0,
         'YAML'       => 0,
-        'Dancer2'     => 0.06,
+        'Dancer2'    => 0.06,
+        'Moose'      => 0,
         'Nagios::StatusLog' => 44,
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },

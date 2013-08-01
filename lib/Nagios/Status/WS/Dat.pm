@@ -24,6 +24,8 @@ sub host_service_stat {
     return {
         'status' => $svc_stat->status,
         'status_information' => $svc_stat->plugin_output,
+        'performance' => $svc_stat->performance_data,
+        'last_check' => $svc_stat->last_check,
     };
 }
 
