@@ -17,6 +17,12 @@ $cpanm --installdeps .
 How to run
 ==========
 
+- In config.yml, change a proper path to the status.dat file as well as nagios version. the default is
+
+        nagios:
+            filename: /usr/local/var/lib/nagios/status.dat
+            version: 3.0
+
 - Running stand-alone
 
        $perl bin/app.pl
