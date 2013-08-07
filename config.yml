@@ -28,6 +28,7 @@ template: "simple"
 #       end_tag:   '%>'
 
 nagios:
-    filename: /usr/local/var/lib/nagios/status.dat
+    #filename: /var/cache/nagios2/status.dat #ubuntu 12.04 LTS
+    filename: /usr/local/var/lib/nagios/status.dat #osx
     version: 3.0
 

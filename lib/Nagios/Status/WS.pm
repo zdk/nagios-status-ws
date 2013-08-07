@@ -11,7 +11,10 @@ set serializer => 'JSON';
 get '/:host/:service' => sub {
     print config->{log};
     my $nagios_dat = Nagios::Status::WS::Dat->new();
-    return $nagios_dat->host_service_stat( params->{host}, uc(params->{service}) );
+    return $nagios_dat->host_service_stat(
+        params->{host},
+        params->{service}
+    );
 };
 
 get qr{^/user/(?<id>\d+)\.(?<format>\w+)} => sub {

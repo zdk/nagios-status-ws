@@ -83,3 +83,23 @@ Check for SSH service
 	{"status":"CRITICAL","last_check":"1375353095","performance":"","status_information":"Connection refused"}
 
 
+Check for Current Load
+
+    $curl -v http://localhost:3000/localhost/current+load
+    * About to connect() to localhost port 3000 (#0)
+    *   Trying ::1...
+    *   Trying 127.0.0.1...
+    * Connected to localhost (127.0.0.1) port 3000 (#0)
+    > GET /localhost/current+load HTTP/1.1
+    > User-Agent: curl/7.29.0
+    > Host: localhost:3000
+    > Accept: */*
+    >
+    coreHTTP/1.0 200 OK
+    Server: Perl Dancer2 0.06
+    Content-Length: 199
+    Content-Type: application/json
+
+    * Connection #0 to host localhost left intact
+    {"status":"OK","last_check":"1375354707","performance":"load1=0.968;5.000;10.000;0; load5=1.108;4.000;6.000;0; load15=1.148;3.000;4.000;0;","status_information":"OK - load average: 0.97, 1.11, 1.15"}
+
